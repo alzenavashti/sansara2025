@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SANSARA 2025</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Baloo+2:wght@400;500;600;700;800&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Fredoka', 'Baloo 2', 'system-ui', 'ui-sans-serif'],
+              body: ['Comfortaa', 'Baloo 2', 'system-ui', 'ui-sans-serif'],
+              title: ['Baloo 2', 'Fredoka', 'system-ui', 'ui-sans-serif']
+            },
+            colors: {
+              peach: '#FDE7D9',
+              lilac: '#DCD5FF',
+              mint: '#D9F7EA',
+              sky: '#D8EEFF',
+              grape: '#6C63FF'
+            },
+            boxShadow: {
+              blob: '0 10px 40px rgba(108, 99, 255, .25)'
+            },
+            keyframes: {
+              floaty: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' } },
+              wiggle: { '0%,100%': { transform: 'rotate(-2deg)' }, '50%': { transform: 'rotate(2deg)' } }
+            },
+            animation: {
+              floaty: 'floaty 6s ease-in-out infinite',
+              wiggle: 'wiggle 4s ease-in-out infinite'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Subtle noise background for a playful texture */
+      .noise {
+        position: fixed; inset: 0; pointer-events: none; opacity: .05; mix-blend-mode: multiply;
+        background-image: url('data:image/svg+xml;utf8,\
+          <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">\
+            <filter id="n">\
+              <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>\
+              <feColorMatrix type="saturate" values="0"/>\
+            </filter>\
+            <rect width="100%" height="100%" filter="url(%23n)" opacity="0.2"/>\
+          </svg>');
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-800 font-body">
+    <!-- Pastel blobs background -->
+    <div class="fixed -z-10 inset-0 overflow-hidden">
+      <div class="absolute -top-20 -left-20 w-[40rem] h-[40rem] bg-peach rounded-full blur-3xl opacity-70 animate-floaty"></div>
+      <div class="absolute top-1/2 -translate-y-1/2 -right-24 w-[38rem] h-[38rem] bg-lilac rounded-full blur-3xl opacity-70 animate-floaty" style="animation-delay:1s"></div>
+      <div class="absolute bottom-[-6rem] left-1/3 w-[30rem] h-[30rem] bg-mint rounded-full blur-3xl opacity-70 animate-floaty" style="animation-delay:2s"></div>
+    </div>
+    <div class="noise"></div>
+
+    <!-- Hero -->
+    <main>
+      <section class="relative max-w-7xl mx-auto px-6 pt-8 sm:pt-14 pb-12">
+        <!-- Mobile Layout: Center everything -->
+        <div class="lg:hidden text-center">
+          <!-- Logo SANSARA dari Canva -->
+          <div class="mb-6">
+            <img src="logo.png" alt="Logo Lomba SANSARA 2025 - Sains Anak Kota Semarang" class="mx-auto w-full max-w-md h-auto drop-shadow-lg">
+          </div>
+          <p class="mt-4 text-slate-600 max-w-lg mx-auto font-body leading-relaxed">Ajak adik-adik bereksperimen, berimajinasi, dan bersaing sehat dalam festival sains paling seru tahun ini! ✨🔭</p>
+          
+          <!-- Mobile Buttons -->
+          <div id="tautan-mobile" class="mt-8 space-y-3 max-w-md mx-auto">
+            <a id="btn-buku-mobile" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-5 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold text-slate-800">Buku Panduan Lomba Sansara</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+            </a>
+            <a id="btn-poster-mobile" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-5 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold text-slate-800">Poster Lomba Sansara</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+            </a>
+            <a id="btn-sd-mobile" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-5 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold text-slate-800">Form Pendaftaran SD</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+            </a>
+            <a id="btn-smp-mobile" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-5 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold text-slate-800">Form Pendaftaran SMP</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+            </a>
+            <a id="btn-kontak-mobile" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:brightness-105 transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Contact Person</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">📞</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Layout: Left illustrations, center content, right illustrations -->
+        <div class="hidden lg:block">
+          <!-- Additional floating science elements in background -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-1/4 animate-floaty" style="animation-delay:3s; animation-duration:8s">
+              <img src="neuron2.png" alt="Neuron" class="w-6 h-6 opacity-30 drop-shadow-sm">
+            </div>
+            <div class="absolute bottom-32 right-1/4 animate-wiggle" style="animation-delay:4s; animation-duration:6s">
+              <img src="x.png" alt="X" class="w-5 h-5 opacity-40 drop-shadow-sm">
+            </div>
+            <div class="absolute top-1/3 left-1/6 animate-bounce" style="animation-delay:5s; animation-duration:4s">
+              <img src="book.png" alt="Book" class="w-7 h-7 opacity-25 drop-shadow-sm">
+            </div>
+            <div class="absolute bottom-1/4 right-1/6 animate-floaty" style="animation-delay:2.5s; animation-duration:7s">
+              <img src="cube.png" alt="Cube" class="w-5 h-5 opacity-35 drop-shadow-sm">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-3 gap-8 items-center min-h-[600px] relative z-10">
+            <!-- Left Side: Character ce.png -->
+            <div class="relative flex flex-col justify-center items-center">
+              <div class="relative animate-floaty" style="animation-duration:4s">
+                <img src="ce.png" alt="Karakter Anak Sains" class="w-48 h-auto drop-shadow-xl">
+                <!-- Fun floating elements around character -->
+                <div class="absolute -top-4 -right-2 animate-bounce" style="animation-delay:0.5s">
+                  <img src="micro.png" alt="Mikroskop" class="w-8 h-8 drop-shadow-md">
+                </div>
+                <div class="absolute -bottom-2 -left-4 animate-wiggle" style="animation-delay:1s">
+                  <img src="chem.png" alt="Chemistry" class="w-6 h-6 drop-shadow-md">
+                </div>
+                <div class="absolute top-1/3 -left-6 animate-floaty" style="animation-delay:2s">
+                  <img src="leaf1.png" alt="Leaf" class="w-5 h-5 drop-shadow-md">
+                </div>
+                <div class="absolute bottom-1/4 -right-8 animate-wiggle" style="animation-delay:1.5s">
+                  <img src="cube.png" alt="Cube" class="w-6 h-6 drop-shadow-md">
+                </div>
+              </div>
+            </div>
+
+            <!-- Center: Main Content -->
+            <div class="text-center">
+              <!-- Logo SANSARA dari Canva -->
+              <div class="mb-8">
+                <img src="logo.png" alt="Logo Lomba SANSARA 2025 - Sains Anak Kota Semarang" class="mx-auto w-full max-w-lg h-auto drop-shadow-lg">
+              </div>
+              <p class="mt-4 text-slate-600 max-w-lg mx-auto text-lg font-body leading-relaxed">Ajak adik-adik bereksperimen, berimajinasi, dan bersaing sehat dalam festival sains paling seru tahun ini! ✨🔭</p>
+              
+              <!-- Desktop Buttons -->
+              <div id="tautan" class="mt-8 space-y-3 max-w-lg mx-auto">
+                <a id="btn-buku" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-6 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+                  <span class="font-body font-semibold text-slate-800">Buku Panduan Lomba Sansara</span>
+                  <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+                </a>
+                <a id="btn-poster" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-6 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+                  <span class="font-body font-semibold text-slate-800">Poster Lomba Sansara</span>
+                  <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+                </a>
+                <a id="btn-sd" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-6 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+                  <span class="font-body font-semibold text-slate-800">Form Pendaftaran SD</span>
+                  <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+                </a>
+                <a id="btn-smp" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-white/80 backdrop-blur px-6 py-4 border border-slate-200 shadow hover:shadow-blob transition-all hover:-translate-y-0.5 cursor-pointer">
+                  <span class="font-body font-semibold text-slate-800">Form Pendaftaran SMP</span>
+                  <span class="group-hover:translate-x-0.5 transition-transform">➡️</span>
+                </a>
+                <a id="btn-kontak" class="group flex items-center justify-between gap-3 w-full rounded-2xl bg-grape text-white px-6 py-4 shadow-blob hover:brightness-105 transition-all hover:-translate-y-0.5 cursor-pointer">
+                  <span class="font-body font-semibold">Contact Person</span>
+                  <span class="group-hover:translate-x-0.5 transition-transform">📞</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Character co.png -->
+            <div class="relative flex flex-col justify-center items-center">
+              <div class="relative animate-floaty" style="animation-duration:5s; animation-delay:1s">
+                <img src="co.png" alt="Karakter Anak Sains" class="w-48 h-auto drop-shadow-xl">
+                <!-- Fun floating elements around character -->
+                <div class="absolute -top-2 -left-3 animate-wiggle" style="animation-delay:0.8s">
+                  <img src="rocket.png" alt="Rocket" class="w-8 h-8 drop-shadow-md">
+                </div>
+                <div class="absolute -bottom-3 -right-2 animate-bounce" style="animation-delay:1.5s">
+                  <img src="neuron.png" alt="Neuron" class="w-7 h-7 drop-shadow-md">
+                </div>
+                <div class="absolute top-1/4 -right-8 animate-floaty" style="animation-delay:2.2s">
+                  <img src="gen.png" alt="DNA" class="w-6 h-6 drop-shadow-md">
+                </div>
+                <div class="absolute bottom-1/3 -left-6 animate-wiggle" style="animation-delay:0.3s">
+                  <img src="lamp.png" alt="Lamp" class="w-6 h-6 drop-shadow-md">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang -->
+      <section id="tentang" class="relative bg-white/70">
+        <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+          <div class="md:col-span-1">
+            <h2 class="font-title text-3xl font-bold text-slate-900">Tentang SANSARA</h2>
+            <p class="mt-2 text-slate-600 font-body leading-relaxed">Kegiatan tahunan untuk siswa SD–SMP se-Kota Semarang: eksperimen, kuis sains, dan pameran mini. Dirancang ramah anak, penuh permainan dan rasa ingin tahu.</p>
+          </div>
+          <div class="md:col-span-2 grid sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-blob transition-shadow">
+              <p class="text-sm text-slate-500 font-body font-medium">Tanggal</p>
+              <p class="font-title font-bold text-slate-900">2025 (detail menyesuaikan)</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-blob transition-shadow">
+              <p class="text-sm text-slate-500 font-body font-medium">Lokasi</p>
+              <p class="font-title font-bold text-slate-900">Kota Semarang</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-blob transition-shadow">
+              <p class="text-sm text-slate-500 font-body font-medium">Peserta</p>
+              <p class="font-title font-bold text-slate-900">SD & SMP</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ singkat -->
+      <section id="faq" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="font-title text-3xl font-bold text-slate-900 mb-6">Pertanyaan Umum</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <details class="rounded-2xl border border-slate-200 bg-white p-5 open:shadow-blob transition-all">
+            <summary class="font-body font-bold cursor-pointer text-slate-900">Apakah acara ini berbayar?</summary>
+            <p class="mt-2 text-slate-600 font-body">Ketentuan biaya/gratis mengikuti buku panduan resmi.</p>
+          </details>
+          <details class="rounded-2xl border border-slate-200 bg-white p-5 open:shadow-blob transition-all">
+            <summary class="font-body font-bold cursor-pointer text-slate-900">Bagaimana cara mendaftar?</summary>
+            <p class="mt-2 text-slate-600 font-body">Gunakan tombol pendaftaran (SD/SMP) di bagian atas halaman.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Kontak -->
+      <section id="kontak" class="bg-gradient-to-b from-white to-sky/60">
+        <div class="max-w-6xl mx-auto px-6 py-12">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-blob">
+            <h2 class="font-title text-3xl font-bold text-slate-900">Contact Person</h2>
+            <p class="mt-2 text-slate-600 font-body">Silakan hubungi panitia untuk pertanyaan atau kerja sama.</p>
+            <div class="mt-4 grid sm:grid-cols-3 gap-4">
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-body font-bold text-slate-900">Nama</p>
+                <p id="cp-name" class="text-slate-700 font-body">—</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-body font-bold text-slate-900">WhatsApp</p>
+                <a id="cp-wa" href="#" class="text-grape font-body font-medium hover:underline">—</a>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4">
+                <p class="font-body font-bold text-slate-900">Email</p>
+                <a id="cp-email" href="#" class="text-grape font-body font-medium hover:underline">—</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-10 text-center text-sm text-slate-500 font-body">© 2025 SANSARA • Dibuat oleh volfir</footer>
+
+    <script>
+      // === 1) ISI LINK DI SINI ===
+      // Ganti '#' dengan tautan milikmu
+      const LINKS = {
+        buku:   '#',
+        poster: '#',
+        sd:     '#',
+        smp:    '#',
+        kontak: '#', // bisa mailto: atau link WA
+      };
+
+      // Contact Person (opsional)
+      const CONTACT = {
+        name: 'Panitia SANSARA',
+        wa:   'https://wa.me/62xxxxxxxxxx',
+        email:'mailto:panitia@sansara.id'
+      };
+
+      // Terapkan tautan & kontak ke elemen
+      function applyLinks(){
+        const map = [
+          ['btn-buku', LINKS.buku],
+          ['btn-poster', LINKS.poster],
+          ['btn-sd', LINKS.sd],
+          ['btn-smp', LINKS.smp],
+          // Mobile buttons
+          ['btn-buku-mobile', LINKS.buku],
+          ['btn-poster-mobile', LINKS.poster],
+          ['btn-sd-mobile', LINKS.sd],
+          ['btn-smp-mobile', LINKS.smp]
+        ];
+        map.forEach(([id, href])=>{
+          const el = document.getElementById(id);
+          if(el){ el.setAttribute('href', href || '#'); el.setAttribute('target','_blank'); el.setAttribute('rel','noopener'); }
+        });
+
+        // Contact buttons -> scroll ke section kontak jika tidak ada link khusus
+        ['btn-kontak', 'btn-kontak-mobile'].forEach(btnId => {
+          const cta = document.getElementById(btnId);
+          if(cta) {
+            if(LINKS.kontak && LINKS.kontak !== '#'){
+              cta.setAttribute('href', LINKS.kontak);
+              cta.setAttribute('target','_blank');
+              cta.setAttribute('rel','noopener');
+            } else {
+              cta.addEventListener('click', (e)=>{ e.preventDefault(); document.querySelector('#kontak').scrollIntoView({behavior:'smooth'}); });
+            }
+          }
+        });
+
+        // Isi kartu kontak (optional)
+        document.getElementById('cp-name').textContent = CONTACT.name || '—';
+        const wa = document.getElementById('cp-wa');
+        wa.href = CONTACT.wa || '#';
+        wa.textContent = CONTACT.wa ? 'Chat WA' : '—';
+        const email = document.getElementById('cp-email');
+        email.href = CONTACT.email || '#';
+        email.textContent = CONTACT.email ? CONTACT.email.replace('mailto:','') : '—';
+      }
+
+      // Smooth scroll untuk semua anchor internal
+      document.addEventListener('click', (e)=>{
+        const a = e.target.closest('a[href^="#"]');
+        if(a){
+          const dest = document.querySelector(a.getAttribute('href'));
+          if(dest){ e.preventDefault(); dest.scrollIntoView({behavior:'smooth'}); }
+        }
+      });
+
+      // Ripple kecil saat tombol diklik (fun effect)
+      document.querySelectorAll('#tautan a, #tautan-mobile a').forEach(btn=>{
+        btn.addEventListener('click', function(e){
+          if(this.getAttribute('href') === '#') return; // skip internal
+          const c = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          c.style.position='absolute'; c.style.inset='0'; c.style.borderRadius='inherit';
+          c.style.background='radial-gradient(circle at '+(e.clientX-rect.left)+'px '+(e.clientY-rect.top)+'px, rgba(108,99,255,.35), transparent 40%)';
+          c.style.pointerEvents='none'; c.style.opacity='0'; c.style.transition='opacity .6s';
+          this.style.position='relative'; this.appendChild(c);
+          requestAnimationFrame(()=>{ c.style.opacity='1'; setTimeout(()=>c.remove(), 500); });
+        });
+      });
+
+      applyLinks();
+    </script>
+  </body>
+</html>
