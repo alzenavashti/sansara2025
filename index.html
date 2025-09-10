@@ -110,6 +110,14 @@
             <a id="btn-smp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Form Pendaftaran SMP</span>             
             </a>
+
+            <a id="btn-datasd-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-datasmp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SMP/MTs/Sederajat</span>             
+            </a>
           </div>
         </div>
 
@@ -176,6 +184,14 @@
             </a>
             <a id="btn-smp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Form Pendaftaran SMP</span>
+            </a>
+
+            <a id="btn-datasd" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-datasmp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SMP/MTs/Sederajat</span>             
             </a>
               </div>
             </div>
@@ -319,6 +335,8 @@
         poster: 'https://drive.google.com/file/d/1a270zp1dfGr0bMVyhTTtJf5KF-FeQ3ti/view?usp=sharing',
         sd:     'https://bit.ly/pendaftaranlombasainsanaksdmi2025',
         smp:    'https://bit.ly/pendaftaranlombasainsanaksmpmts2025',
+        datasd:    'data_sd.html',
+        datasmp:    'https://bit.ly/pendaftaranlombasainsanaksmpmts2025',
         kontak: '#', // bisa mailto: atau link WA
       };
 
@@ -336,11 +354,15 @@
           ['btn-poster', LINKS.poster],
           ['btn-sd', LINKS.sd],
           ['btn-smp', LINKS.smp],
+          ['btn-datasd', LINKS.datasd],
+          ['btn-datasmp', LINKS.datasmp]
           // Mobile buttons
           ['btn-buku-mobile', LINKS.buku],
           ['btn-poster-mobile', LINKS.poster],
           ['btn-sd-mobile', LINKS.sd],
-          ['btn-smp-mobile', LINKS.smp]
+          ['btn-smp-mobile', LINKS.smp],
+          ['btn-datasd-mobile', LINKS.datasd],
+          ['btn-datasmp-mobile', LINKS.datasmp]
         ];
         map.forEach(([id, href])=>{
           const el = document.getElementById(id);
