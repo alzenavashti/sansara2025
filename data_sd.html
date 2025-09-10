@@ -73,22 +73,32 @@
     <main>
       <!-- === Data Peserta === -->
       <section id="data" class="max-w-6xl mx-auto px-6 py-12 relative">
-        <h2 class="font-title text-3xl font-bold text-slate-900 mb-8 text-center">Data Peserta</h2>
+  <h2 class="font-title text-3xl font-bold text-slate-900 mb-8 text-center">Data Peserta</h2>
 
-        <div class="overflow-x-auto rounded-3xl shadow-blob bg-white/80 backdrop-blur-sm relative">
-          <!-- Loading overlay -->
-          <div id="sheet-loading"
-               class="absolute inset-0 flex items-center justify-center bg-white/70 rounded-3xl">
-            <span class="text-grape font-semibold">Memuat data...</span>
-          </div>
-          <table id="sheet-table" class="min-w-full text-left border-collapse font-body">
-            <thead class="bg-grape text-white">
-              <tr id="sheet-header"></tr>
-            </thead>
-            <tbody id="sheet-body" class="divide-y divide-slate-200"></tbody>
-          </table>
-        </div>
-      </section>
+  <div class="overflow-x-auto rounded-3xl shadow-blob bg-white/80 backdrop-blur-sm relative">
+    <!-- Loading overlay -->
+    <div id="sheet-loading"
+         class="absolute inset-0 flex items-center justify-center bg-white/70 rounded-3xl">
+      <span class="text-grape font-semibold">Memuat data...</span>
+    </div>
+    <table id="sheet-table" class="min-w-full text-left border-collapse font-body">
+      <thead class="bg-grape text-white">
+        <tr id="sheet-header"></tr>
+      </thead>
+      <tbody id="sheet-body" class="divide-y divide-slate-200"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Extra CSS to make first column smaller -->
+<style>
+  #sheet-table th:first-child,
+  #sheet-table td:first-child {
+    width: 80px;       /* adjust size as needed */
+    text-align: center; /* optional: center align */
+    white-space: nowrap; /* prevents text from wrapping */
+  }
+</style>
     </main>
 
     <footer class="py-10 text-center text-sm text-slate-500 font-body">
@@ -151,3 +161,4 @@
     </script>
   </body>
 </html>
+
