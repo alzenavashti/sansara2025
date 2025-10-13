@@ -122,6 +122,14 @@
             <a id="btn-datasmp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SMP/MTs/Sederajat</span>             
             </a>
+
+            <a id="btn-semisd-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-semismp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SMP/MTs/Sederajat</span>             
+            </a>
           </div>
         </div>
 
@@ -200,6 +208,14 @@
 
             <a id="btn-datasmp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Data Pendaftar SiNARAN Jenjang SMP/MTs/Sederajat</span>             
+            </a>
+
+            <a id="btn-semisd" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-semismp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SMP/MTs/Sederajat</span>             
             </a>
               </div>
             </div>
@@ -350,6 +366,8 @@
         extend:    'https://www.instagram.com/p/DOnbxMJjxAW/?img_index=1',
         datasd:    'data_sd.html',
         datasmp:    'data_smp.html',
+        semisd:    'semifinal_sd.html',
+        semismp:    'semifinal_smp.html',
         kontak: '#', // bisa mailto: atau link WA
       };
 
@@ -370,6 +388,8 @@
           ['btn-extend', LINKS.extend],
           ['btn-datasd', LINKS.datasd],
           ['btn-datasmp', LINKS.datasmp],
+          ['btn-semisd', LINKS.semisd],
+          ['btn-semismp', LINKS.semismp],
           // Mobile buttons
           ['btn-buku-mobile', LINKS.buku],
           ['btn-poster-mobile', LINKS.poster],
@@ -377,7 +397,9 @@
           ['btn-extend-mobile', LINKS.extend],
           ['btn-smp-mobile', LINKS.smp],
           ['btn-datasd-mobile', LINKS.datasd],
-          ['btn-datasmp-mobile', LINKS.datasmp]
+          ['btn-datasmp-mobile', LINKS.datasmp],
+          ['btn-semisd-mobile', LINKS.semisd],
+          ['btn-semismp-mobile', LINKS.semismp]
         ];
         map.forEach(([id, href])=>{
           const el = document.getElementById(id);
@@ -439,6 +461,7 @@
     </script>
   </body>
 </html>
+
 
 
 
