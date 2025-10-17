@@ -130,6 +130,14 @@
             <a id="btn-semismp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SMP/MTs/Sederajat</span>             
             </a>
+
+            <a id="btn-sertifsd-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Sertifikat Peserta Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-sertifsmp-mobile" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Sertifikat Peserta Jenjang SMP/MTs/Sederajat</span>             
+            </a>
           </div>
         </div>
 
@@ -216,6 +224,14 @@
 
             <a id="btn-semismp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
               <span class="font-body font-semibold">Peserta Lolos Semifinal SiNARAN Jenjang SMP/MTs/Sederajat</span>             
+            </a>
+
+            <a id="btn-sertifsd" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Sertifikat Peserta Jenjang SD/MI/Sederajat</span>             
+            </a>
+
+            <a id="btn-sertifsmp" class="group flex items-center justify-center gap-3 w-full rounded-2xl bg-grape text-white px-5 py-4 shadow-blob hover:bg-[#E17738] transition-all hover:-translate-y-0.5 cursor-pointer">
+              <span class="font-body font-semibold">Sertifikat Peserta Jenjang SMP/MTs/Sederajat</span>             
             </a>
               </div>
             </div>
@@ -368,6 +384,8 @@
         datasmp:    'data_smp.html',
         semisd:    'semifinal_sd.html',
         semismp:    'semifinal_smp.html',
+        sertifsd:  'https://drive.google.com/drive/folders/1mCECD4kTIVqHv0xwnjLCV_9_d4xGTD_U?usp=drive_link',
+        sertifsmp:  'https://drive.google.com/drive/folders/1EsvbduYyT6xJIfK67ViEO9zLZbXTyV7B?usp=drive_link',
         kontak: '#', // bisa mailto: atau link WA
       };
 
@@ -390,6 +408,8 @@
           ['btn-datasmp', LINKS.datasmp],
           ['btn-semisd', LINKS.semisd],
           ['btn-semismp', LINKS.semismp],
+          ['btn-sertifsd', LINKS.sertifsd],
+          ['btn-sertifsmp', LINKS.sertifsmp],
           // Mobile buttons
           ['btn-buku-mobile', LINKS.buku],
           ['btn-poster-mobile', LINKS.poster],
@@ -398,8 +418,8 @@
           ['btn-smp-mobile', LINKS.smp],
           ['btn-datasd-mobile', LINKS.datasd],
           ['btn-datasmp-mobile', LINKS.datasmp],
-          ['btn-semisd-mobile', LINKS.semisd],
-          ['btn-semismp-mobile', LINKS.semismp]
+          ['btn-sertifsd-mobile', LINKS.sertifsd],
+          ['btn-sertifsmp-mobile', LINKS.sertifsmp]
         ];
         map.forEach(([id, href])=>{
           const el = document.getElementById(id);
@@ -461,6 +481,7 @@
     </script>
   </body>
 </html>
+
 
 
 
